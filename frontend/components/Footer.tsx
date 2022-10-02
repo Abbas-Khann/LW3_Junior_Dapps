@@ -11,7 +11,7 @@ const Footer = () => {
             <div>
                 <span>Created by </span>
                 <Link href="https://github.com/Abbas-Khann">
-                <a target="_blank">Abbas Khan</a> 
+                <a target="_blank">Abbas Khan </a> 
                 </Link>
                 <span>| All Rights Reserved</span>
             </div>
