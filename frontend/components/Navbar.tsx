@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div className='px-5 py-8 flex items-center justify-between'>
         <Image src={logo} alt="logo" width={246} height={71} />
-        <ConnectButton />
+        <ConnectButton  />
     </div>
   )
 }

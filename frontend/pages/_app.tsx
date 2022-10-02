@@ -35,12 +35,17 @@ const wagmiClient = createClient({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider chains={chains} theme={midnightTheme()} >
-      <Component {...pageProps} />
-      </RainbowKitProvider>
-    </WagmiConfig>
-  );
+      <WagmiConfig client={wagmiClient}>
+        <RainbowKitProvider chains={chains} modalSize="compact" theme={midnightTheme({
+          accentColor: '#6A62FC4F',
+          accentColorForeground: 'white',
+          borderRadius: 'small',
+          fontStack: 'rounded'
+        })}>
+        <Component {...pageProps} />
+        </RainbowKitProvider>
+      </WagmiConfig>
+    );
 }
 
 export default MyApp
