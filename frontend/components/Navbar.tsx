@@ -5,10 +5,10 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 const Navbar = () => {
   return (
-    <div className='px-5 py-8 flex items-center justify-between'>
+    <nav className='px-5 py-2 flex items-center justify-between bg-gradient-to-r from-[#212b3c] to-[#112B3C] text-white'>
         <Image src={logo} alt="logo" width={246} height={71} />
         <ConnectButton  />
-    </div>
+    </nav>
   )
 }
 
