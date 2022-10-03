@@ -16,7 +16,7 @@ const Hero = () => {
       </div>
       <div className='sm:flex sm:items-center sm:justify-center py-16 px-20'>
       <div className='text-white md:px-52 md:py-10 flex flex-col items-start'>
-        <Link href="/">
+        <Link href="/Ens">
         <button
         className='transition duration-300 ease-out hover:ease-in text-xl sm:text-3xl py-2 text-white mb-3 border-b-2'
         >Ens</button>
