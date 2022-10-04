@@ -21,7 +21,7 @@ const Hero = () => {
         className='transition duration-300 ease-out hover:ease-in text-xl sm:text-3xl py-2 text-white mb-3 border-b-2'
         >Ens</button>
         </Link>
-        <Link href="/">
+        <Link href="/NFTCollection">
         <button
         className='transition duration-300 ease-out hover:ease-in text-xl sm:text-3xl py-2 text-white mb-3 border-b-2'
         >NFT&nbsp;Collection</button>
