@@ -1,4 +1,4 @@
-export const KHAN_PUNKS_CONTRACT_ADDRESS: string | undefined = "0x64C053986581bE0cE6f2c417Dc6741269258fA30";
+export const KHAN_PUNKS_CONTRACT_ADDRESS: string = "0x64C053986581bE0cE6f2c417Dc6741269258fA30";
 
 export const KHAN_PUNKS_CONTRACT_ABI: Array<object> = [
     {
