@@ -22,7 +22,7 @@ const NFTCollection = () => {
           </div>
           <div className="sm:flex sm:items-center sm:justify-center py-16 md:py-0 px-20 text-3xl">
             <div className="mb-10 flex flex-col items-center">
-              <h1>Welcome to LW3 Junior Punks</h1>
+              <h1>Welcome to Khan NFT Punks</h1>
               <button className="px-4 py-2 my-8 border-2 transition duration-300 motion-safe:animate-bounce ease-out hover:ease-in hover:bg-gradient-to-r from-[#5463FF] to-[#89CFFD] text-3xl rounded hover:text-white mb-3">
                 Public Mint 🚀
               </button>
