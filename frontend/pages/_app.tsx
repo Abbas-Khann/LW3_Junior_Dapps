@@ -1,4 +1,5 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
+import { ToastContainer } from 'react-toastify';
 import type { AppProps } from 'next/app'
 import '@rainbow-me/rainbowkit/styles.css';
 import {
@@ -23,7 +24,7 @@ const { chains, provider } = configureChains(
 );
 
 const { connectors } = getDefaultWallets({
-  appName: 'My RainbowKit App',
+  appName: 'Junior Dapps',
   chains
 });
 
@@ -42,6 +43,18 @@ function MyApp({ Component, pageProps }: AppProps) {
           borderRadius: 'small',
           fontStack: 'rounded'
         })}>
+        <ToastContainer
+        theme='dark'
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        />
         <Component {...pageProps} />
         </RainbowKitProvider>
       </WagmiConfig>
