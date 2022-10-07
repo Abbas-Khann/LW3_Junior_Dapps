@@ -1,4 +1,5 @@
 import '../styles/globals.css';
+import { Provider } from '@self.id/react';
 import { ToastContainer } from 'react-toastify';
 import type { AppProps } from 'next/app'
 import '@rainbow-me/rainbowkit/styles.css';
@@ -36,28 +37,30 @@ const wagmiClient = createClient({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-      <WagmiConfig client={wagmiClient}>
-        <RainbowKitProvider chains={chains} modalSize="compact" theme={midnightTheme({
-          accentColor: '#6A62FC4F',
-          accentColorForeground: 'white',
-          borderRadius: 'small',
-          fontStack: 'rounded'
-        })}>
-        <ToastContainer
-        theme='dark'
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        />
-        <Component {...pageProps} />
-        </RainbowKitProvider>
-      </WagmiConfig>
+    <Provider client={{ ceramic: "testnet-clay" }}>
+    <WagmiConfig client={wagmiClient}>
+    <RainbowKitProvider chains={chains} modalSize="compact" theme={midnightTheme({
+      accentColor: '#6A62FC4F',
+      accentColorForeground: 'white',
+      borderRadius: 'small',
+      fontStack: 'rounded'
+    })}>
+    <ToastContainer
+    theme='dark'
+    position="top-right"
+    autoClose={5000}
+    hideProgressBar={false}
+    newestOnTop={false}
+    closeOnClick
+    rtl={false}
+    pauseOnFocusLoss
+    draggable
+    pauseOnHover
+    />
+    <Component {...pageProps} />
+    </RainbowKitProvider>
+    </WagmiConfig>
+    </Provider>
     );
 }
 

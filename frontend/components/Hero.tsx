@@ -26,12 +26,12 @@ const Hero = () => {
         className='transition duration-300 ease-out hover:ease-in text-xl sm:text-3xl py-2 text-white mb-3 border-b-2'
         >NFT&nbsp;Collection</button>
         </Link>
-        <Link href="/">
+        <Link href="/Ceramic">
         <button
         className='transition duration-300 ease-out hover:ease-in text-xl sm:text-3xl py-2 text-white mb-3 border-b-2'
         >Ceramic</button>
         </Link>
-        <Link href="/">
+        <Link href="/Lottery">
         <button
         className='transition duration-300 ease-out hover:ease-in text-xl sm:text-3xl py-2 text-white mb-3 border-b-2'
         >Lottery&nbsp;Game</button>

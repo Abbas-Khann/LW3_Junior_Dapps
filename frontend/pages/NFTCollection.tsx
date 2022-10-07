@@ -7,6 +7,7 @@ import { useSigner, useProvider, useContract } from "wagmi";
 import { KHAN_PUNKS_CONTRACT_ABI, KHAN_PUNKS_CONTRACT_ADDRESS } from "../constants/KhanPunks";
 import { utils } from "ethers";
 import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const NFTCollection = () => {
 
@@ -47,6 +48,10 @@ const NFTCollection = () => {
 
   useEffect(() => {
     getMintedTokenIdsAmount();
+    setInterval(async function () {
+      await getMintedTokenIdsAmount();
+    }, 5 * 1000
+    )
   }, [])
 
   return (
@@ -64,11 +69,13 @@ const NFTCollection = () => {
               NFT&nbsp;Collection
             </h3>
           </div>
-          <div className="sm:flex sm:items-center sm:justify-center py-16 md:py-0 px-20 text-3xl">
+          <div className="sm:flex sm:items-center sm:justify-center py-16 md:py-10 lg:py-0 px-20 text-3xl">
             <div className="mb-10 flex flex-col items-center">
               <h1>Welcome to Khan NFT Punks</h1>
               <p className="py-5 text-2xl">{tokenIdsMinted.toString()}/10 have been minted</p>
-              <button className="px-4 py-2 my-8 border-2 transition duration-300 motion-safe:animate-bounce ease-out hover:ease-in hover:bg-gradient-to-r from-[#5463FF] to-[#89CFFD] text-3xl rounded hover:text-white mb-3">
+              <button className="px-4 py-2 my-8 border-2 transition duration-300 motion-safe:animate-bounce ease-out hover:ease-in hover:bg-gradient-to-r from-[#5463FF] to-[#89CFFD] text-3xl rounded hover:text-white mb-3"
+              onClick={publicMint}
+              >
                 Public Mint 🚀
               </button>
             </div>
