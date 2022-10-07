@@ -7,6 +7,7 @@ import Web3Modal from "web3modal";
 import { useViewerConnection, ViewerRecord } from "@self.id/react";
 import { EthereumAuthProvider } from "@self.id/web";
 import { useViewerRecord } from "@self.id/react";
+import Navbar from "../components/Navbar";
 
 const Home: NextPage = () => {
   // Connection to Ceramic
@@ -97,6 +98,7 @@ const Home: NextPage = () => {
 
   return (
     <div>
+      <Navbar />
       <div className="bg-gradient-to-r from-[#121212] to-[#002B5B] text-white min-h-screen">
         <div className="flex flex-col justify-center items-center space-y-5 p-20">
           <span className="text-2xl pt-12 inline-block text-black border-b-4 border-[#7084a0] sm:text-5xl font-bold 
