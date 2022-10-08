@@ -58,7 +58,7 @@ const NFTCollection = () => {
     <div>
       <Navbar />
       <div>
-        <section className="bg-gradient-to-r from-[#121212] to-[#002B5B] text-white">
+        <section className="bg-gradient-to-r from-[#121212] to-[#002B5B] text-white h-[84vh]">
           <div className="flex justify-center">
             <h3
               className="text-2xl pt-12 inline-block text-black border-b-4 border-[#7084a0] sm:text-5xl font-bold 
