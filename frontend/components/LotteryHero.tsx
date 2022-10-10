@@ -24,7 +24,7 @@ const LotteryHero = () => {
     const [isOwner, setIsOwner] = useState<boolean>(false);
     const [entryFee, setEntryFee] = useState(zero);
     const [maxPlayers, setMaxPlayers] = useState(0);
-    const [gameStarted, setGameStarted] = useState<boolean>(false)
+    const [gameStarted, setGameStarted] = useState<boolean>(true)
     const [players, setPlayers] = useState<string[]>([]);
     const [winner, setWinner] = useState<null>(null);
     const [logs, setLogs] = useState<any[]>([]);
@@ -109,11 +109,11 @@ const LotteryHero = () => {
     }
     console.log(isOwner)
     useEffect(() => {
-      // checkIfGameStarted();
+      checkIfGameStarted();
       getOwner()
-      // setInterval(() => {
-      //   checkIfGameStarted();
-      // }, 2000)
+      setInterval(() => {
+        checkIfGameStarted();
+      }, 2000)
     }, [walletConnected.isConnected])
 
 
@@ -176,7 +176,7 @@ const LotteryHero = () => {
             >
                 Start Game 🚀
             </button>
-            </div>
+            </div> 
         </div>
       )
     }
@@ -186,7 +186,10 @@ const LotteryHero = () => {
     <section className="px-2 py-20 bg-gradient-to-r from-[#121212] to-[#002B5B] text-white h-[83vh]">
       <div className="md:flex items-center justify-around ">
         <div className=" md:w-3/5 px-4">
-          <h2 className="text-4xl text-skin-base my-4 leading-tight lg:text-6xl tracking-tighter mb-6">
+          <h2 className="text-2xl pt-12 inline-block text-black sm:text-5xl md:text-6xl mb-5 font-bold 
+            bg-gradient-to-r bg-clip-text text-transparent 
+            from-red-400 via-purple-500 to-green-400
+            animate-text">
             Welcome to Random <br />
             Winner Game
           </h2>
