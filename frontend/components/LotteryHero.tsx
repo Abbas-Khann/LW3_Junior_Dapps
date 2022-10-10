@@ -111,9 +111,9 @@ const LotteryHero = () => {
     useEffect(() => {
       checkIfGameStarted();
       getOwner()
-      setInterval(() => {
-        checkIfGameStarted();
-      }, 2000)
+      // setInterval(() => {
+      //   checkIfGameStarted();
+      // }, 2000)
     }, [walletConnected.isConnected])
 
 
