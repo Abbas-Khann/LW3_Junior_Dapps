@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const subgraphQuery = async (): Promise<void> => {
+export const subgraphQuery = async (query: any): Promise<void> => {
     try {
         const subgraph_url = "https://api.thegraph.com/subgraphs/name/abbas-khann/lotterygame";
         const response = await axios.post(subgraph_url, {

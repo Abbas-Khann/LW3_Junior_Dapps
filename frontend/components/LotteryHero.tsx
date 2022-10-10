@@ -1,12 +1,11 @@
-import React, {useEffect, useRef, useState, useReducer} from 'react';
+import React, {useEffect, useState, useReducer} from 'react';
 import Image from 'next/image';
 import LotteryImg from '../public/lotteryImg.png';
-import Head from 'next/head';
 import { FETCH_CREATED_GAME } from '../queries';
 import { subgraphQuery } from '../utils';
 import { RANDOM_WINNER_GAME_ADDRESS, RANDOM_WINNER_GAME_ABI } from '../constants/KhanPunks';
 import { useContract, useProvider, useSigner, useAccount } from 'wagmi';
-import { BigNumber, ethers, providers, utils } from 'ethers';
+import { BigNumber, utils } from 'ethers';
 import { toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
@@ -111,9 +110,9 @@ const LotteryHero = () => {
     useEffect(() => {
       checkIfGameStarted();
       getOwner()
-      // setInterval(() => {
-      //   checkIfGameStarted();
-      // }, 2000)
+      setInterval(() => {
+        checkIfGameStarted();
+      }, 2000)
     }, [walletConnected.isConnected])
 
 
