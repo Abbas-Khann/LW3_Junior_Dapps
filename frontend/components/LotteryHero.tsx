@@ -21,8 +21,8 @@ const LotteryHero = () => {
     });
     const zero = BigNumber.from("0");
     const [isOwner, setIsOwner] = useState<boolean>(false);
-    const [entryFee, setEntryFee] = useState(zero);
-    const [maxPlayers, setMaxPlayers] = useState(0);
+    const [entryFee, setEntryFee] = useState<BigNumber>(zero);
+    const [maxPlayers, setMaxPlayers] = useState<string>("0");
     const [gameStarted, setGameStarted] = useState<boolean>(true)
     const [players, setPlayers] = useState<string[]>([]);
     const [winner, setWinner] = useState<null>(null);
@@ -58,7 +58,7 @@ const LotteryHero = () => {
     const checkIfGameStarted = async () => {
       try {
         const _gameStarted: boolean = await contract.gameStarted();
-        const _gameArray = await subgraphQuery(FETCH_CREATED_GAME());
+        const _gameArray: any = await subgraphQuery(FETCH_CREATED_GAME());
         const _game = _gameArray.games[0];
         let _logs: any = [];
         if(_gameStarted) {
@@ -116,11 +116,15 @@ const LotteryHero = () => {
     }, [walletConnected.isConnected])
 
 
-
+  const renderLogs: any = logs.map((log, index) => {
+    <div key={index} className="text-base text-skin-darkMuted lg:text-2xl sm:mb-14 mb-10">
+    {log}
+    </div>
+  })
 
   const renderButton = () => {
     if(gameStarted) {
-      if(players.length === maxPlayers) {
+      if(players.length === parseInt(maxPlayers)) {
         return (
           <button
           className='px-4 py-2 my-8 border-2 transition duration-300 motion-safe:animate-bounce ease-out hover:ease-in hover:bg-gradient-to-r from-[#5463FF] to-[#89CFFD] text-3xl rounded hover:text-white mb-3'
@@ -144,9 +148,9 @@ const LotteryHero = () => {
         <div>
           <div className='flex flex-col sm:flex-row py-10 justify-evenly'>
             <input
-            onChange={(e) => {
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
               setEntryFee(
-                e.target.value >= 0
+                e.target.value >= "0"
                   ? utils.parseEther(e.target.value.toString())
                   : zero
               );
@@ -158,9 +162,9 @@ const LotteryHero = () => {
             type="number"
             />
             <input 
-            onChange={(e) => {
-              setMaxPlayers(e.target.value ?? 0)
-            }}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setMaxPlayers(e.target.value ?? "0")
+            }
             className=' text-black text-2xl text-center border-2 dark:text-white font-bold dark:bg-gradient-to-r dark:bg-clip-text dark:text-transparent 
             dark:from-red-400 dark:via-purple-500 dark:to-white
             dark:animate-text sm:w-40'
@@ -195,15 +199,12 @@ const LotteryHero = () => {
           <p className="text-base text-skin-darkMuted lg:text-2xl sm:mb-14 mb-10">
             It is a lottery game where winner is chosen randomly<br />and wins the entire lottery pool.
           </p>
+          <div>
             {renderButton()}
-            {
-              logs && 
-              logs.map((log, index) => {
-                <div key={index} className="text-base text-skin-darkMuted lg:text-2xl sm:mb-14 mb-10">
-                {log}
-                </div>
-              })
-            }
+            </div>
+            <div>
+            {renderLogs}
+            </div>
         </div>
         <div className="hidden md:block w-10/12 md:w-1/3 mx-auto md:mx-0 my-8 order-2 ">
           <Image src={LotteryImg} alt="Lottery Image" />
