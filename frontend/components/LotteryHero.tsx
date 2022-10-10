@@ -3,6 +3,13 @@ import Image from 'next/image';
 import LotteryImg from '../public/lotteryImg.png';
 
 const LotteryHero = () => {
+
+  // const renderButton = (): JSX.Element => {
+  //   if(gameStarted) {
+  //     if(players.length === maxPlayers)
+  //   }
+  // }
+
   return (
     <section className="px-2 py-20 bg-gradient-to-r from-[#121212] to-[#002B5B] text-white h-[83vh]">
       <div className="md:flex items-center justify-around ">
@@ -36,7 +43,7 @@ const LotteryHero = () => {
             >
                 Start Game 🚀
             </button>
-                </div>
+            </div>
         </div>
         <div className="hidden md:block w-10/12 md:w-1/3 mx-auto md:mx-0 my-8 order-2 ">
           <Image src={LotteryImg} alt="Lottery Image" />
