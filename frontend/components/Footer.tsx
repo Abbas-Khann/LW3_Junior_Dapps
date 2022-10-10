@@ -9,11 +9,11 @@ const Footer = () => {
     <footer className='bg-gradient-to-r from-[#121212] to-[#002B5B] text-[#FCF8E8] px-10 py-5 border-t border-sky-200'>
         <div className='flex justify-between items-center'>
             <div>
-                <span>Created by </span>
+                <span>Made with &#10084; by </span>
                 <Link href="https://github.com/Abbas-Khann">
                 <a target="_blank">Abbas Khan </a> 
                 </Link>
-                <span>| All Rights Reserved</span>
+                <span>| Open Source</span>
             </div>
             <div className='flex items-center justify-between w-52'>
                 <div className='border-2 border-[#FCF8E8] rounded-full p-2'>
