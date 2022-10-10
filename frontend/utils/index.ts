@@ -14,6 +14,6 @@ export const subgraphQuery = async (): Promise<void> => {
     } 
     catch (err: any) {
         console.error(err);
-        throw new Error(`Could not query subgraph ${err.message}`)
+        throw new Error(`Could not query subgraph ${err.message}`);
     }
 }
