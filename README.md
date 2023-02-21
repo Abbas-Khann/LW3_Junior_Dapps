@@ -1,8 +1,8 @@
 ### 1. What is your project, and what problem does it solve?
 
-FVM-Explore allows developers to **Compile, Deploy, Verify and Interact with Smart contracts** on the FVM-Chain with an easy-to-use interface and interactive experience . It also provides developers with APIs to build on top of the platform .
+FVM-Explore allows developers to **Compile, Deploy, Verify and Interact with Smart contracts** on the FVM-Chain with an easy-to-use interface and interactive experience . It also provides developers with APIs to build on top of the platform.
 
-It is a Native Developer Tooling and Infrastructure application for the FVM Ecosystem focussing to provide the best Developer experience . Developers no longer need to Create Scripts and Write tests to interact with the deployed contracts.
+It is a native developer tooling and Infrastructure application for the FVM Ecosystem focusing on providing the best developer experience. Developers no longer need to write scripts or export private keys or do any previous setup to deploy or interact with their smart contracts.
 
 ### 2. Project links
 
@@ -84,9 +84,9 @@ Our Email for communication - [abbaskhan61999@gmail.com](mailto:abbaskhan61999@g
 
   - Our Submission link: [EthGlobal](https://ethglobal.com/showcase/fvm-explore-zk0dg)
 
-Recognition from Filecoin: [Twitter Post](https://twitter.com/ETHGlobal/status/1624106022326632448?s=20)
+  - Recognition from Filecoin: [Twitter Post](https://twitter.com/ETHGlobal/status/1624106022326632448?s=20)
 
-EthGlobal Finalist: [Twitter Post](https://twitter.com/ETHGlobal/status/1624106022326632448?s=20)
+  - EthGlobal Finalist: [Twitter Post](https://twitter.com/ETHGlobal/status/1624106022326632448?s=20)
 
 ### Notes
 
