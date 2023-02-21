@@ -48,8 +48,10 @@ Yes
 - FVM-Explore was built as a submission for the FVM-Space-Warp hackathon.
 
 * Our submission link: [EthGlobal](https://ethglobal.com/showcase/fvm-explore-zk0dg)
+
   Winner of trophy:
   🛠 Filecoin & IPFS — 🥇 Discovery Tools
+
   🏆 FVM Space Warp Finalist
 
 ### Additional questions:
@@ -57,11 +59,15 @@ Yes
 - For each team member(s), please list name, email, Github account, and role in the project.
 
 Abbas Khan
+
 [Github](https://github.com/Abbas-Khann)
+
 Frontend Developer and Product Designer
 
 Dhruv Agarwal
+
 [Github](https://github.com/Dhruv-2003)
+
 Backend Developer
 
 Our Email for communication - [abbaskhan61999@gmail.com](mailto:abbaskhan61999@gmail.com)
@@ -74,11 +80,12 @@ Our Email for communication - [abbaskhan61999@gmail.com](mailto:abbaskhan61999@g
 
   - What was the name of the event? (e.g. ETHGlobal NFTHack, Cal Hacks hello:world, Chainlink, CivHacks, GameDevJ, ETHGlobal Scaling Ethereum)
 
-  FVM-Explore was built as a submission for the FVM Space Warp Hackathon
+    FVM-Explore was built as a submission for the FVM Space Warp Hackathon
 
   - Our Submission link: [EthGlobal](https://ethglobal.com/showcase/fvm-explore-zk0dg)
 
 Recognition from Filecoin: [Twitter Post](https://twitter.com/ETHGlobal/status/1624106022326632448?s=20)
+
 EthGlobal Finalist: [Twitter Post](https://twitter.com/ETHGlobal/status/1624106022326632448?s=20)
 
 ### Notes
